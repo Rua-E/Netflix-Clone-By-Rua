@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useCallback, useState } from "react";
-import  Input  from "../components/input";
+import  Input from "@/components/Input"
 import { signIn } from "next-auth/react"
 
 
@@ -17,7 +17,7 @@ const Auth = () => {
     
     const toggleVariant = useCallback(() => {
         setVariant((currentVariant) => currentVariant === 'login' ? 'register' : 'login')
-    },[]);
+    },[])
 
     const login = useCallback(async () => {
         try {
@@ -63,21 +63,21 @@ const Auth = () => {
                         {variant === 'register' && (
                         <Input 
                             label="Username"
-                            onChange={(event: any) => setName(event.target.value)}
+                            onChange={(ev: any) => setName(ev.target.value)}
                             id="name"
                             value={name}
                         ></Input>
                         )}
                         <Input 
                             label="Email"
-                            onChange={(event: any) => setEmail(event.target.value)}
+                            onChange={(ev: any) => setEmail(ev.target.value)}
                             id="email"
                             type="email"
                             value={email}
                         ></Input>
                         <Input 
                             label="Password"
-                            onChange={(event: any) => setPassword(event.target.value)}
+                            onChange={(ev: any) => setPassword(ev.target.value)}
                             id="password"
                             type="password"
                             value={password}
