@@ -35,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             return res.status(200).json(user);
         }
 
-        if (req.method === 'DELETE') {
+        if (req.method === `DELETE`) {
             const { currentUser } = await serverAuth(req);
 
             const { movieId } = req.body;
@@ -43,8 +43,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             const existingMovie = await prismadb.movie.findUnique({
                 where: {
                     id: movieId,
-                };
-            })
+                }
+            });
+
             if (!existingMovie) {
                 throw new Error('Invalid ID');
             }
