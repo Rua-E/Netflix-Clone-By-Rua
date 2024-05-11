@@ -5,7 +5,7 @@ const useMovie = (id?: string) => {
     const { 
         data, 
         error, 
-        isLoading 
+        isLoading, 
     } = useSWR(id ? `/api/movies/${id}` : null, fetcher, {
         revalidateIfStale: false,
         revalidateOnFocus: false,

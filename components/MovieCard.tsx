@@ -94,7 +94,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
                                             transition
                                             hover:bg-neutral-300
                                             "
-                                        onClick={() => router.push(`/watch/${data?.id}`)} >
+                                        onClick={() => router.push(`/watch/${data?.id}`)}  >
                                             <BsFillPlayFill size={30}/>
                                     </div>
                                     <FavoriteButton movieId={data?.id} />

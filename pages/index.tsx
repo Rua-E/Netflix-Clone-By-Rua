@@ -33,14 +33,8 @@ export default function Home() {
     <Navbar></Navbar>
     <Billboard></Billboard>
     <div className="pb-40" >
-      <MovieList 
-        title="Trending Now" 
-        data={movies}
-        ></MovieList>
-      <MovieList 
-        title="My List" 
-        data={favorites}
-        ></MovieList>
+      <MovieList title="Trending Now" data={movies} ></MovieList>
+      <MovieList title="My List" data={favorites} ></MovieList>
     </div>
     </>
   );
